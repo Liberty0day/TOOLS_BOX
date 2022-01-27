@@ -118,3 +118,11 @@ esac
 done
 
 ```
+
+- [ ] If you have error message 
+ -  Cannot connect the virtual device sata0:1 because no corresponding
+ -  CLICK OK 
+ -  IF YOU HAVE ERROR MESSAGE CLICK OK OR NEXT
+
+- [ ] Enjoy with your system bye
+
