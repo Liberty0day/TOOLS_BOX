@@ -41,28 +41,39 @@ cp $file.ovf backup/$file.ovf
 cp $file.mf backup/$file.mf
 }
 
+while :;
+do
+
+clear
+echo "-------------------------------------------------------------------------------"
+echo "convert $file.ova ---> $file.ovf ---> patch $file.mf -----X lunch vmware"
+echo "-------------------------------------------------------------------------------"                           
 echo "[!] Give me your operating system name to make your ova file vmware compatible"
-echo "choice 0) backup 1) Linux 2) MacOS"
+echo "choice 0) exit 1) backup 2) Linux 3) MacOS"
 read os
 
 
 case "$os" in
    "0") 
+            echo "[+] EXIT :: bye" 
+            exit 1
+   ;;   
+   "1") 
             echo "[+] BACKUP :: save $file.ovf and $file.mf" 
             backup
    ;;
-   "1") 
+   "2") 
             echo "[+] LINUX :: Patch $file.ovf file" 
             patchLinux
             echo "[+] Update $file.mf"
             sha256
    ;;
-   "2") 
+   "3") 
             echo "[+] MACOS :: Patch .ovf file"
             patchMaOS
             echo "[+] Update $file.mf"
             sha256
    ;;
 esac
-
+done
 
