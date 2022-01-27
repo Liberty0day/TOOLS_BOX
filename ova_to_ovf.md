@@ -36,10 +36,6 @@ LINUX
 ```
 #!/bin/bash
 
-#function convert(){
-#./ovftool --lax /Users/operator/Downloads/WIN7/Win7Box.ova /Users/operator/Downloads/WIN7/Win7Box.ovf
-#}
-
 function nameVM(){
 echo "[!] Give me the name of your vm example Win7Box"
 read yourVM
