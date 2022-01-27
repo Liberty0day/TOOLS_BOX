@@ -33,6 +33,9 @@ LINUX
 
 - [ ] You need patch ovf and update mf, you can if you want use the scriupt patch-ovf.sh
 
+[patch-ovf.sh](https://github.com/Liberty0day/TOOLS_BOX/blob/main/patch-ovf.sh)
+
+
 ```
 #!/bin/bash
 
