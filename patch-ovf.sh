@@ -1,10 +1,11 @@
 #!/bin/bash
 
-function nameVM(){
-echo "[!] Give me the name of your vm example Win7Box"
-read yourVM
-file=$yourVM;
-}
+$1=file
+#function nameVM(){
+#echo "[!] Give me the name of your vm example Win7Box"
+#read yourVM
+#file=$yourVM;
+#}
 
 function patchMaOS(){
 sed  -i '' 's|<vssd:VirtualSystemType>virtualbox-2.2</vssd:VirtualSystemType>|<vssd:VirtualSystemType>vmx-07</vssd:VirtualSystemType>|g' $file.ovf
