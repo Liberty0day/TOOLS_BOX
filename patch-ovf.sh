@@ -1,9 +1,11 @@
 #!/bin/bash
 
 function check(){
-if echo $1 |grep -o '[.]\{1\}[ova]\{3\}' >/dev/null;then
+if 
+	echo $1 |grep -o '[.]\{1\}[ova]\{3\}' >/dev/null;then
 	$1=file;
 else
+	echo './patch-ovf.sh file.ova'
 	exit 1;
 fi
 }
