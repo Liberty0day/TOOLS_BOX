@@ -40,35 +40,35 @@ cp $file.mf backup/$file.mf
 
 
 
-if 
-	echo $1 |grep -o '[.]\{1\}[ovf]\{3\}';then
-	$1=file;
-	clear
+if
+echo $1 |grep -o '[.]\{1\}[ovf]\{3\}';then
+file=$(echo $1 |sed 's/.ovf//g');
+clear
 echo "-------------------------------------------------------------------------------"
 echo "convert $file.ova ---> $file.ovf ---> patch $file.mf -----X lunch vmware"
 echo "-------------------------------------------------------------------------------"
-                   
+
 echo "[!] Give me your operating system name to make your ova file vmware compatible"
 echo "choice 0) exit 1) backup 2) Linux 3) MacOS"
 read os
 
 
 case "$os" in
-   "0") 
-            echo "[+] EXIT :: bye" 
+   "0")
+            echo "[+] EXIT :: bye"
             exit 1
-   ;;   
-   "1") 
-            echo "[+] BACKUP :: save $file.ovf and $file.mf" 
+   ;;
+   "1")
+            echo "[+] BACKUP :: save $file.ovf and $file.mf"
             backup
    ;;
-   "2") 
-            echo "[+] LINUX :: Patch $file.ovf file" 
+   "2")
+            echo "[+] LINUX :: Patch $file.ovf file"
             patchLinux
             echo "[+] Update $file.mf"
             sha256
    ;;
-   "3") 
+   "3")
             echo "[+] MACOS :: Patch .ovf file"
             patchMaOS
             echo "[+] Update $file.mf"
@@ -81,7 +81,6 @@ else
 	echo './patch-ovf.sh file.ovf'
 	exit 1;
 fi
-
 
 
 
