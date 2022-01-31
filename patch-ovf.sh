@@ -76,6 +76,8 @@ case "$os" in
    ;;
 esac
 else
+	echo 'Error :: please use the script'
+	echo 'Exemple :'
 	echo './patch-ovf.sh file.ova'
 	exit 1;
 fi
