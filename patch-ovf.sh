@@ -44,8 +44,7 @@ cp $file.ovf backup/$file.ovf
 cp $file.mf backup/$file.mf
 }
 
-while :;
-do
+
 
 
 clear
@@ -80,4 +79,4 @@ case "$os" in
             sha256
    ;;
 esac
-done
+
