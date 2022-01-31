@@ -41,7 +41,7 @@ cp $file.mf backup/$file.mf
 
 
 if 
-	echo $1 |grep -o '[.]\{1\}[ova]\{3\}';then
+	echo $1 |grep -o '[.]\{1\}[ovf]\{3\}';then
 	$1=file;
 	clear
 echo "-------------------------------------------------------------------------------"
@@ -78,7 +78,7 @@ esac
 else
 	echo 'Error :: please use the script'
 	echo 'Exemple :'
-	echo './patch-ovf.sh file.ova'
+	echo './patch-ovf.sh file.ovf'
 	exit 1;
 fi
 
