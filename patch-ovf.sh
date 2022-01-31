@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function check(){
+
 if 
 	echo $1 |grep -o '[.]\{1\}[ova]\{3\}' >/dev/null;then
 	$1=file;
@@ -8,7 +8,7 @@ else
 	echo './patch-ovf.sh file.ova'
 	exit 1;
 fi
-}
+
 
 function patchMaOS(){
 sed  -i '' 's|<vssd:VirtualSystemType>virtualbox-2.2</vssd:VirtualSystemType>|<vssd:VirtualSystemType>vmx-07</vssd:VirtualSystemType>|g' $file.ovf
@@ -47,7 +47,7 @@ cp $file.mf backup/$file.mf
 while :;
 do
 
-check
+
 clear
 echo "-------------------------------------------------------------------------------"
 echo "convert $file.ova ---> $file.ovf ---> patch $file.mf -----X lunch vmware"
